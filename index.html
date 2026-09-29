@@ -76,6 +76,7 @@
     margin: 0 0 8px;
   }
   .positioning { font-size: 18px; color: var(--muted); margin: 0 0 12px; }
+  .nw { display: block; line-height: 1.45; }
   .links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 0; padding: 0; list-style: none; font-size: 15px; }
 
   /* Sections */
@@ -110,6 +111,8 @@
   .work p { color: var(--muted); margin: 0 0 6px; }
   .meta { font-size: 14px; color: var(--faint); }
   .math h3 { font-size: 18px; }
+  .work p.authors { font-size: 14px; color: var(--faint); margin: 0 0 2px; }
+  .subhead { font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); margin: 28px 0 4px; }
 
   footer {
     margin-top: 64px;
@@ -139,7 +142,7 @@
     <img class="photo" src="headshot.jpg" alt="Arsh Chhabra" width="150" height="200">
     <div>
       <h1>Arsh Chhabra</h1>
-      <p class="positioning">MSAFA, Columbia Business School. Investing and fundamental research.</p>
+      <p class="positioning"><span class="nw">MSAFA, Columbia Business School</span><span class="nw">Former PhD student, Princeton ORFE</span><span class="nw">Mathematics and Computer Science, Pomona College</span></p>
       <ul class="links">
         <li><a href="mailto:arshchhabra108@gmail.com">arshchhabra108@gmail.com</a></li>
         <li><a href="https://www.linkedin.com/in/arsh-chhabra" rel="noopener">LinkedIn</a></li>
@@ -149,8 +152,11 @@
 
   <section id="about">
     <h2>About</h2>
-    <p>I am an MS in Accounting and Fundamental Analysis student at Columbia Business School, graduating in December 2027, focused on private equity, growth equity, credit, and fundamental research. Before Columbia, I was a Private Equity Summer Analyst at 360 ONE Asset Management in Mumbai, working on growth-stage and late-stage investments.</p>
-    <p>My training is in mathematics. I studied Mathematics and Computer Science at Pomona College, published three peer-reviewed papers in algebra, and began a PhD in Operations Research and Financial Engineering at Princeton on a full fellowship before leaving to build a career in investing. I passed CFA Level I in August 2026.</p>
+    <p>I am an MS in Accounting and Fundamental Analysis (MSAFA) student at Columbia Business School, graduating in December 2027, focused on investment banking, private equity, and intrinsic valuation. I am the elected Academic Representative for my cohort and a member of CSIMA and the Restructuring &amp; Debt Investing Club. I passed CFA Level I in August 2026 and am a Level II candidate.</p>
+    <p>Most recently I was a Private Equity Summer Analyst at 360 ONE Asset Management in Mumbai, working on growth-stage and late-stage investments. I worked on live deals across the transaction life cycle, helped write investment committee notes, and conducted commercial due diligence and research.</p>
+    <p>Before that, I began the doctoral program in Operations Research and Financial Engineering at Princeton on a full fellowship, and withdrew voluntarily to pursue a career in applied finance. The program deepened my interest in financial modeling, probability, and the mathematics of how capital moves.</p>
+    <p>I studied Mathematics and Computer Science at Pomona College, where I received the Hugh J. Hamilton Prize in Mathematics and the John Stauffer Scholarship for Academic Merit, was elected to Phi Beta Kappa and Sigma Xi, and published three peer-reviewed papers spanning linear algebra, number theory, abstract algebra, and combinatorics. I was also a teaching assistant for six courses across five semesters, from abstract algebra to statistical theory, and for the 121 Math Summer Program.</p>
+    <p>Outside of markets, I read widely, play drums, and think too much about technological entropy.</p>
   </section>
 
   <section id="writing">
@@ -159,17 +165,17 @@
     <ul class="works">
       <li class="work">
         <h3><a href="essays/deferred-distress-us-housing.pdf" target="_blank" rel="noopener">Deferred Distress: Apparent Stability in the US Residential Real Estate Market</a></h3>
-        <p>Policy, accounting rules, and aligned incentives delay the recognition of housing distress, so leverage and risk are understated in the headline data.</p>
+        <p>US house prices look stable and delinquency sits below 2019 levels, even as affordability is near multi-decade lows. The essay argues that this stability partly reflects how distress is measured and recognized, tracing three mechanisms: affordability pressure that headline data hides, accounting rules that delay loss recognition, and incentives that break the chain from a missed payment to a price index.</p>
         <span class="meta">September 2026 &middot; <a href="essays/deferred-distress-us-housing.pdf" target="_blank" rel="noopener">Read (PDF)</a></span>
       </li>
       <li class="work">
         <h3><a href="essays/india-renewable-ipp.pdf" target="_blank" rel="noopener">Adaptive Corporate Governance and the Cost of Capital: Market Structure of India's Renewable IPP Sector</a></h3>
-        <p>Why India's listed renewable power producers trade in two valuation tiers, and how an adaptive view of governance explains competition across short, medium, and long horizons.</p>
+        <p>A study of market structure in India's utility-scale renewable IPP sector. It argues that corporate governance is scale-conditional, and that the cost of capital is the mechanism connecting small-scale value destruction to large-scale value creation. It closes with a convergence trade and two deployment ideas for private capital.</p>
         <span class="meta">June 2026 &middot; <a href="essays/india-renewable-ipp.pdf" target="_blank" rel="noopener">Read (PDF)</a></span>
       </li>
       <li class="work">
         <h3><a href="essays/shareholders-of-last-resort.pdf" target="_blank" rel="noopener">Hot Potato Investing, the Shareholders of Last Resort, and Structural Distortions in the Markets</a></h3>
-        <p>How the growth of passive flows strains the assumptions behind CAPM and index investing, and the price distortions that follow.</p>
+        <p>How the growth of passive index flows strains the theory behind the CAPM and the market portfolio, and the structural distortions that follow, with analysis of the US and Indian equity markets.</p>
         <span class="meta">May 2026 &middot; <a href="essays/shareholders-of-last-resort.pdf" target="_blank" rel="noopener">Read (PDF)</a></span>
       </li>
     </ul>
@@ -181,17 +187,30 @@
     <ul class="works">
       <li class="work">
         <h3><a href="https://www.tandfonline.com/doi/abs/10.1080/00927872.2025.2537271" rel="noopener">Numerical Semigroups from Rational Matrices III: Semigroups of Matricial Dimension Two and a Counterexample to the Lonely Element Conjecture</a></h3>
+        <p>We characterize semigroups of the natural numbers of matricial dimension 2 and produce a counterexample to the conjecture that a numerical semigroup whose small elements are lonely has matricial dimension at most 2.</p>
+        <p class="authors">Arsh Chhabra and Stephan Ramon Garcia</p>
         <span class="meta"><em>Communications in Algebra</em>, 2025 &middot; <a href="https://www.tandfonline.com/doi/abs/10.1080/00927872.2025.2537271" rel="noopener">Journal</a> &middot; <a href="https://arxiv.org/abs/2506.11554" rel="noopener">arXiv</a></span>
       </li>
       <li class="work">
         <h3><a href="https://www.cambridge.org/core/product/EAFCFE98F2D896FC9733D96747CE7638" rel="noopener">Numerical Semigroups from Rational Matrices II: Matricial Dimension Does Not Exceed Multiplicity</a></h3>
+        <p>We continue our study of exponent semigroups of rational matrices. Our main result is that the matricial dimension of a numerical semigroup is at most its multiplicity (the least generator), greatly improving upon the previous upper bound (the conductor). For many numerical semigroups, including all symmetric numerical semigroups, our upper bound is tight.</p>
+        <p class="authors">Arsh Chhabra, Stephan Ramon Garcia, and Christopher O'Neill</p>
         <span class="meta"><em>Bulletin of the Australian Mathematical Society</em>, 2024 &middot; <a href="https://www.cambridge.org/core/product/EAFCFE98F2D896FC9733D96747CE7638" rel="noopener">Journal</a> &middot; <a href="https://arxiv.org/abs/2407.15571" rel="noopener">arXiv</a></span>
       </li>
       <li class="work">
         <h3><a href="https://www.tandfonline.com/doi/abs/10.1080/00927872.2024.2402832" rel="noopener">Numerical Semigroups from Rational Matrices I: Power-Integral Matrices and Nilpotent Representations</a></h3>
+        <p>Our aim in this paper is to initiate the study of exponent semigroups for rational matrices. We prove that every numerical semigroup is the exponent semigroup of some rational matrix. We also obtain lower bounds on the size of such matrices and discuss the related class of power-integral matrices.</p>
+        <p class="authors">Arsh Chhabra, Stephan Ramon Garcia, Fangqian Zhang, and Hechun Zhang</p>
         <span class="meta"><em>Communications in Algebra</em>, 2024 &middot; <a href="https://www.tandfonline.com/doi/abs/10.1080/00927872.2024.2402832" rel="noopener">Journal</a> &middot; <a href="https://arxiv.org/abs/2407.03560" rel="noopener">arXiv</a></span>
       </li>
     </ul>
+    <h4 class="subhead">Research Presentations</h4>
+    <div class="work">
+      <h3>Adinkras as Origami</h3>
+      <p>Adinkras are bipartite graphs introduced by physicists to study supersymmetry, and are known to be a type of Dessin d'Enfant. The project studied how to express this construction through an elliptic curve, so that the resulting map is an "origami": a square tiling of a surface branched over a single point.</p>
+      <p>Awarded a fully funded research fellowship through the PRiME REU (Pomona Research in Math Experience, a Research Experience for Undergraduates), under the supervision of Prof. Edray Goins. Presented a poster at MAA MathFest 2023 that won honorable mention, and presented findings in an hour-long talk at Pomona College with the team.</p>
+      <span class="meta">Summer 2023 &middot; <a href="https://pages.pomona.edu/~ehga2017/prime.html" rel="noopener">PRiME program</a></span>
+    </div>
   </section>
 
   <footer>
