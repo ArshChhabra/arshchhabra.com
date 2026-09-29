@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Arsh Chhabra</title>
-<meta name="description" content="Arsh Chhabra, MS in Accounting and Fundamental Analysis candidate at Columbia Business School. Independent research on private equity, growth equity, credit, and fundamental analysis.">
+<meta name="description" content="Arsh Chhabra, MS in Accounting and Fundamental Analysis student at Columbia Business School. Independent writing on markets and published research in mathematics.">
 <meta name="author" content="Arsh Chhabra">
 <meta property="og:title" content="Arsh Chhabra">
-<meta property="og:description" content="MSAFA candidate at Columbia Business School. Research, background, and resume.">
+<meta property="og:description" content="Writing on markets and published mathematics.">
 <meta property="og:type" content="website">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f3a5f'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23ffffff' text-anchor='middle'%3EAC%3C/text%3E%3C/svg%3E">
@@ -20,7 +20,7 @@
     --rule: #e4e1dc;
     --accent: #1f3a5f;
     --accent-hover: #2d5286;
-    --card: #ffffff;
+    --photo-bg: #e8e5e0;
     --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
     --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   }
@@ -33,7 +33,7 @@
       --rule: #2c2e32;
       --accent: #9db8dc;
       --accent-hover: #c0d3ec;
-      --card: #1b1c1f;
+      --photo-bg: #26282c;
     }
   }
 
@@ -48,11 +48,7 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 72px 24px 56px;
-  }
+  .wrap { max-width: 700px; margin: 0 auto; padding: 72px 24px 56px; }
   a {
     color: var(--accent);
     text-decoration: none;
@@ -63,43 +59,28 @@
   a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
   /* Header */
-  header { margin-bottom: 56px; }
+  header { display: flex; align-items: center; gap: 28px; margin-bottom: 48px; }
+  .photo {
+    flex: 0 0 112px;
+    width: 112px; height: 112px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--photo-bg);
+      }
   h1 {
     font-family: var(--serif);
     font-weight: 600;
     font-size: 40px;
     line-height: 1.15;
     letter-spacing: -0.01em;
-    margin: 0 0 12px;
+    margin: 0 0 8px;
   }
-  .positioning {
-    font-size: 19px;
-    color: var(--muted);
-    margin: 0 0 24px;
-    max-width: 36em;
-  }
-  .links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 22px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 15px;
-  }
-  .btn {
-    display: inline-block;
-    padding: 6px 14px;
-    border: 1px solid var(--accent);
-    border-radius: 4px;
-    font-weight: 500;
-  }
-  .btn:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  .positioning { font-size: 18px; color: var(--muted); margin: 0 0 12px; }
+  .links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 0; padding: 0; list-style: none; font-size: 15px; }
 
   /* Sections */
   section { margin-top: 52px; }
   h2 {
-    font-family: var(--sans);
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -110,42 +91,25 @@
     border-bottom: 1px solid var(--rule);
   }
   p { margin: 0 0 14px; }
+  .intro { color: var(--muted); font-size: 16px; margin-bottom: 8px; }
 
-  /* Essays */
-  .essays { list-style: none; margin: 0; padding: 0; }
-  .essay { padding: 18px 0; border-bottom: 1px solid var(--rule); }
-  .essay:first-child { padding-top: 4px; }
-  .essay:last-child { border-bottom: none; }
-  .essay h3 {
+  /* Lists of works */
+  .works { list-style: none; margin: 0; padding: 0; }
+  .work { padding: 18px 0; border-bottom: 1px solid var(--rule); }
+  .work:first-child { padding-top: 4px; }
+  .work:last-child { border-bottom: none; }
+  .work h3 {
     font-family: var(--serif);
     font-size: 21px;
     font-weight: 600;
     line-height: 1.3;
     margin: 0 0 6px;
   }
-  .essay h3 a { color: var(--text); border-bottom: none; }
-  .essay h3 a:hover { color: var(--accent); }
-  .essay p { color: var(--muted); margin: 0 0 6px; }
+  .work h3 a { color: var(--text); border-bottom: none; }
+  .work h3 a:hover { color: var(--accent); }
+  .work p { color: var(--muted); margin: 0 0 6px; }
   .meta { font-size: 14px; color: var(--faint); }
-
-  /* Entries (experience, education) */
-  .entry { margin-bottom: 22px; }
-  .entry:last-child { margin-bottom: 0; }
-  .entry-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-  .entry-title { font-weight: 600; }
-  .entry-date { font-size: 14px; color: var(--faint); white-space: nowrap; }
-  .entry-sub { color: var(--muted); font-size: 15px; margin-bottom: 4px; }
-  .entry p { margin: 4px 0 0; font-size: 16px; }
-
-  ul.plain { margin: 0; padding-left: 18px; }
-  ul.plain li { margin-bottom: 6px; font-size: 16px; }
-  ul.plain li::marker { color: var(--faint); }
+  .math h3 { font-size: 18px; }
 
   footer {
     margin-top: 64px;
@@ -157,17 +121,14 @@
 
   @media (max-width: 560px) {
     body { font-size: 16px; }
-    .wrap { padding: 48px 20px 40px; }
+    .wrap { padding: 44px 20px 40px; }
+    header { flex-direction: column; align-items: flex-start; gap: 18px; }
+    .photo { flex-basis: 88px; width: 88px; height: 88px; font-size: 28px; }
     h1 { font-size: 32px; }
-    .positioning { font-size: 17px; }
+    .positioning { font-size: 16px; }
     section { margin-top: 44px; }
-    .essay h3 { font-size: 19px; }
-  }
-
-  @media print {
-    body { background: #fff; color: #000; }
-    a { color: #000; border: none; }
-    .btn { border: none; padding: 0; }
+    .work h3 { font-size: 19px; }
+    .math h3 { font-size: 17px; }
   }
 </style>
 </head>
@@ -175,88 +136,61 @@
 <div class="wrap">
 
   <header>
-    <h1>Arsh Chhabra</h1>
-    <p class="positioning">MS in Accounting and Fundamental Analysis candidate at Columbia Business School, focused on private equity, growth equity, credit, and fundamental research.</p>
-    <ul class="links">
-      <li><a class="btn" href="Arsh_Chhabra_Resume.pdf" download>Resume (PDF)</a></li>
-      <li><a href="mailto:arshchhabra108@gmail.com">arshchhabra108@gmail.com</a></li>
-      <li><a href="https://www.linkedin.com/in/arsh-chhabra" rel="noopener">LinkedIn</a></li>
-    </ul>
+    <img class="photo" src="headshot.jpg" alt="Arsh Chhabra" width="112" height="112">
+    <div>
+      <h1>Arsh Chhabra</h1>
+      <p class="positioning">MSAFA, Columbia Business School. Investing and fundamental research.</p>
+      <ul class="links">
+        <li><a href="mailto:arshchhabra108@gmail.com">arshchhabra108@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/arsh-chhabra" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
   </header>
 
   <section id="about">
     <h2>About</h2>
-    <p>I am a graduate student in the MSAFA program at Columbia Business School, graduating in December 2027. My background is in mathematics: I studied Mathematics and Computer Science at Pomona College, published three peer-reviewed papers in algebra, and began a PhD in Operations Research and Financial Engineering at Princeton before leaving to build a career in investing.</p>
-    <p>Most recently I was a Private Equity Summer Analyst at 360 ONE Asset Management in Mumbai. I write long-form independent research on companies and sectors, using only public information.</p>
+    <p>I am an MS in Accounting and Fundamental Analysis student at Columbia Business School, graduating in December 2027, focused on private equity, growth equity, credit, and fundamental research. Before Columbia, I was a Private Equity Summer Analyst at 360 ONE Asset Management in Mumbai, working on growth-stage and late-stage investments.</p>
+    <p>My training is in mathematics. I studied Mathematics and Computer Science at Pomona College, published three peer-reviewed papers in algebra, and began a PhD in Operations Research and Financial Engineering at Princeton on a full fellowship before leaving to build a career in investing. I passed CFA Level I in August 2026.</p>
   </section>
 
-  <section id="research">
-    <h2>Research</h2>
-    <ul class="essays">
-      <li class="essay">
-        <h3><a href="#">Essay title one (placeholder)</a></h3>
-        <p>One-line summary of the thesis and why it matters.</p>
-        <span class="meta">Month 2026 &middot; <a href="#">Read essay</a></span>
+  <section id="writing">
+    <h2>Writing on Markets</h2>
+    <p class="intro">Independent research based only on public information.</p>
+    <ul class="works">
+      <li class="work">
+        <h3><a href="essays/deferred-distress-us-housing.pdf" target="_blank" rel="noopener">Deferred Distress: Apparent Stability in the US Residential Real Estate Market</a></h3>
+        <p>Policy, accounting rules, and aligned incentives delay the recognition of housing distress, so leverage and risk are understated in the headline data.</p>
+        <span class="meta">September 2026 &middot; <a href="essays/deferred-distress-us-housing.pdf" target="_blank" rel="noopener">Read (PDF)</a></span>
       </li>
-      <li class="essay">
-        <h3><a href="#">Essay title two (placeholder)</a></h3>
-        <p>One-line summary of the thesis and why it matters.</p>
-        <span class="meta">Month 2026 &middot; <a href="#">Read essay</a></span>
+      <li class="work">
+        <h3><a href="essays/india-renewable-ipp.pdf" target="_blank" rel="noopener">Adaptive Corporate Governance and the Cost of Capital: Market Structure of India's Renewable IPP Sector</a></h3>
+        <p>Why India's listed renewable power producers trade in two valuation tiers, and how an adaptive view of governance explains competition across short, medium, and long horizons.</p>
+        <span class="meta">June 2026 &middot; <a href="essays/india-renewable-ipp.pdf" target="_blank" rel="noopener">Read (PDF)</a></span>
       </li>
-      <li class="essay">
-        <h3><a href="#">Essay title three (placeholder)</a></h3>
-        <p>One-line summary of the thesis and why it matters.</p>
-        <span class="meta">Month 2026 &middot; <a href="#">Read essay</a></span>
+      <li class="work">
+        <h3><a href="essays/shareholders-of-last-resort.pdf" target="_blank" rel="noopener">Hot Potato Investing, the Shareholders of Last Resort, and Structural Distortions in the Markets</a></h3>
+        <p>How the growth of passive flows strains the assumptions behind CAPM and index investing, and the price distortions that follow.</p>
+        <span class="meta">May 2026 &middot; <a href="essays/shareholders-of-last-resort.pdf" target="_blank" rel="noopener">Read (PDF)</a></span>
       </li>
     </ul>
   </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">360 ONE Asset Management</span>
-        <span class="entry-date">Apr to Jul 2026</span>
-      </div>
-      <div class="entry-sub">Private Equity Summer Analyst, Mumbai</div>
-      <p>Worked on growth-stage and late-stage investments: drafted investment committee notes, built valuation analyses, and supported commercial due diligence.</p>
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Columbia Business School</span>
-        <span class="entry-date">Expected Dec 2027</span>
-      </div>
-      <div class="entry-sub">MS in Accounting and Fundamental Analysis</div>
-      <p>Elected Academic Representative for the MSAFA cohort. Member of CSIMA and the Restructuring &amp; Debt Investing Club.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Princeton University</span>
-        <span class="entry-date">2025</span>
-      </div>
-      <div class="entry-sub">PhD program, Operations Research and Financial Engineering</div>
-      <p>Left voluntarily after one semester to pursue a career in investing.</p>
-    </div>
-    <div class="entry">
-      <div class="entry-head">
-        <span class="entry-title">Pomona College</span>
-        <span class="entry-date">2025</span>
-      </div>
-      <div class="entry-sub">BA, Mathematics and Computer Science</div>
-      <p>GPA 3.99, magna cum laude, Phi Beta Kappa, Sigma Xi. Hugh J. Hamilton Prize in Mathematics; John Stauffer Scholarship for Academic Merit.</p>
-    </div>
-  </section>
-
-  <section id="credentials">
-    <h2>Credentials and Publications</h2>
-    <ul class="plain">
-      <li>CFA Level I passed (Aug 2026); Level II candidate (May 2027)</li>
-      <li>Wall Street Prep Financial and Valuation Modeling Certificate</li>
-      <li>Three peer-reviewed papers in <em>Communications in Algebra</em> and the <em>Bulletin of the Australian Mathematical Society</em></li>
+  <section id="mathematics" class="math">
+    <h2>Mathematics</h2>
+    <p class="intro">Peer-reviewed papers from undergraduate research at Pomona College.</p>
+    <ul class="works">
+      <li class="work">
+        <h3><a href="https://www.tandfonline.com/doi/abs/10.1080/00927872.2025.2537271" rel="noopener">Numerical Semigroups from Rational Matrices III: Semigroups of Matricial Dimension Two and a Counterexample to the Lonely Element Conjecture</a></h3>
+        <span class="meta"><em>Communications in Algebra</em>, 2025 &middot; <a href="https://www.tandfonline.com/doi/abs/10.1080/00927872.2025.2537271" rel="noopener">Journal</a> &middot; <a href="https://arxiv.org/abs/2506.11554" rel="noopener">arXiv</a></span>
+      </li>
+      <li class="work">
+        <h3><a href="https://www.cambridge.org/core/product/EAFCFE98F2D896FC9733D96747CE7638" rel="noopener">Numerical Semigroups from Rational Matrices II: Matricial Dimension Does Not Exceed Multiplicity</a></h3>
+        <span class="meta"><em>Bulletin of the Australian Mathematical Society</em>, 2024 &middot; <a href="https://www.cambridge.org/core/product/EAFCFE98F2D896FC9733D96747CE7638" rel="noopener">Journal</a> &middot; <a href="https://arxiv.org/abs/2407.15571" rel="noopener">arXiv</a></span>
+      </li>
+      <li class="work">
+        <h3><a href="https://www.tandfonline.com/doi/abs/10.1080/00927872.2024.2402832" rel="noopener">Numerical Semigroups from Rational Matrices I: Power-Integral Matrices and Nilpotent Representations</a></h3>
+        <span class="meta"><em>Communications in Algebra</em>, 2024 &middot; <a href="https://www.tandfonline.com/doi/abs/10.1080/00927872.2024.2402832" rel="noopener">Journal</a> &middot; <a href="https://arxiv.org/abs/2407.03560" rel="noopener">arXiv</a></span>
+      </li>
     </ul>
   </section>
 
